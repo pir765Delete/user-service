@@ -6,7 +6,6 @@ from pydantic import BaseModel
 from tortoise.contrib.fastapi import HTTPNotFoundError
 
 router = APIRouter(
-    prefix="/event",
     tags=["Event"]
 )
 

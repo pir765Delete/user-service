@@ -5,7 +5,6 @@ from pydantic import BaseModel
 from tortoise.contrib.fastapi import HTTPNotFoundError
 
 router = APIRouter(
-    prefix="/subdivision",
     tags=["Subdivision"]
 )
 
