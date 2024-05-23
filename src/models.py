@@ -10,6 +10,7 @@ class Employee(Model):
     password = fields.CharField(max_length=50)
     email = fields.CharField(max_length=100, null=True)
     subdivision = fields.ForeignKeyField('models.Subdivision', on_delete=fields.CASCADE)
+    leader = fields.BooleanField(default=False, null=True)
 
     def __str__(self):
         return self.full_name
@@ -27,7 +28,6 @@ class Event(Model):
 
 class Subdivision(Model):
     name = fields.CharField(max_length=255)
-    leader = fields.IntField()
 
     def __str__(self):
         return self.name

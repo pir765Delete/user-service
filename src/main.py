@@ -31,9 +31,9 @@ app.include_router(
 
 
 @app.get("/")
-async def read_root():
+async def root():
     await connectToDatabase()
-    return {"Hello": "world"}
+    return {"message": "Hello world"}
 
 
 register_tortoise(
